@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   flex-wrap: wrap;
@@ -15,10 +16,7 @@
 }
 
 
-.App-logo {
-animation:  App-logo-spin infinite 20s linear;
-height: 80px;
-}
+
 
 .App-header {
   background-color: rgb(187, 14, 14);
@@ -42,10 +40,21 @@ height: 80px;
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+@keyframes App-logo-anti {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
 
 .container {
   display: flex;
 }
 .item {
-  flex: 100;
+  flex: 1;
 }
+
+@media only screen and (max-width: 640px) {
+  .container{
+    display: block;
+  }
+  }
+

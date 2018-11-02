@@ -24,8 +24,8 @@ class App extends Component {
           <div className="item"><img className="movieImage" src={breakingbadFc} alt="" /></div>
           <div className="item"><img className="movieImage" src={alteredcarbonFc} alt="" /></div>
         </div>
-
       </div>
+
     );
   }
 }
