@@ -15,19 +15,52 @@ class App extends Component {
       <div className="App">
 
         <div className="container">
-          <div className="item"><img className="movieImage" src={niceGuysFc} alt="" /></div>
-          <div className="item"><img className="movieImage" src={suitsFc} alt="" /></div> 
-          <div className="item"><img className="movieImage" src={narutoFc} alt="" /></div>
+          <div className="item">
+          <img className="movieImage" src={niceGuysFc} alt="" />
+            <div className="overlay">
+              <div className="text">Nice guys</div>
+            </div>
+          </div>
+          <div className="item">
+          <img className="movieImage" src={suitsFc} alt="" />
+          <div className="overlay">
+              <div className="text">Suits</div>
+            </div>
+         </div>
+          <div className="item">
+          <img className="movieImage" src={narutoFc} alt="" />
+          <div className="overlay">
+              <div className="text">Naruto</div>
+            </div>
+          </div>
         </div>
+
         <div className="container">
-          <div className="item"><img className="movieImage" src={howimetyourmotherFc} alt="" /></div>
-          <div className="item"><img className="movieImage" src={breakingbadFc} alt="" /></div>
-          <div className="item"><img className="movieImage" src={alteredcarbonFc} alt="" /></div>
+          <div className="item">
+          <img className="movieImage" src={howimetyourmotherFc} alt="" />
+          <div className="overlay">
+              <div className="text">How I met your mother</div>
+            </div>
+          </div>
+          <div className="item">
+          <img className="movieImage" src={breakingbadFc} alt="" />
+          <div className="overlay">
+              <div className="text">Breaking Bad</div>
+            </div>
+          </div>
+          <div className="item">
+          <img className="movieImage" src={alteredcarbonFc} alt="" />
+          <div className="overlay">
+              <div className="text">Altered Carbon</div>
+            </div>
+          </div>
         </div>
       </div>
-
-    );
+     );
+    }
   }
-}
+          
+          
+
 
 export default App;
