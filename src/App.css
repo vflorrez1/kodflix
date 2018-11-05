@@ -61,8 +61,8 @@
 .item:hover{
   /* border: 1px solid #474242; */
   float: unset;
-  margin: 10px 10px 10px 10px; 
-  padding: 3px;
+  /* margin: 10px 10px 10px 10px;  */
+  padding: 5px;
   /* animation: shake 0.5s;
   animation-iteration-count: infinite; */
 }
