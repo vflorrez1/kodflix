@@ -42,8 +42,6 @@ function Gallery() {
         <FilmBlock srcname={niceGuysFc} filmname="Nice Guys" urlext="/nice-guys" />
         <FilmBlock srcname={suitsFc} filmname="Suits" urlext="/suits" />
         <FilmBlock srcname={narutoFc} filmname="Naruto" urlext="/naruto" />
-      </div>
-      <div className="container">
         <FilmBlock srcname={howimetyourmotherFc} filmname="How I met your Mother" urlext="himym" />
         <FilmBlock srcname={breakingbadFc} filmname="Breaking Bad" urlext="breaking-bad" />
         <FilmBlock srcname={alteredcarbonFc} filmname="Altered Carbon" urlext="altered-carbon" />
@@ -59,7 +57,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={Gallery} />
-        <Route exact path="/:var" component={Deets} />
+        <Route exact path="/:varurl" component={Deets} />
         
       </div>
     );
