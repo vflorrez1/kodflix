@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import Gallery from './Gallery.js';
+import Details from './Details.js';
 
 
-function Deets() {
-  return (
-    <h2 className="deetstext"> hey </h2>
-  );
-}
+
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <Route exact path="/" component={Gallery} />
-        <Route exact path="/:varurl" component={Deets} />
-        
+        <Route exact path="/:varurl" component={Details} />
       </div>
     );
   }
