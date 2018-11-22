@@ -5,9 +5,6 @@ import howimetyourmotherFc from './pics/howimetyourmother.jpg';
 import breakingbadFc from './pics/breakingbad.jpg';
 import alteredcarbonFc from './pics/alteredcarbon.jpg';
 
-
-
-
 let films = [{filmName: "Nice Guys", sourceName: niceGuysFc, urlext:"/nice-guys"},
              {filmName: "Suits", sourceName: suitsFc, urlext:"/suits"},
              {filmName: "Naruto", sourceName: narutoFc, urlext:"/naruto"},

@@ -3,8 +3,11 @@ import React, { Component } from 'react'
 class Details extends Component {
     constructor() {
       super();
-      this.state = { detailsOfShow: "Hello, this will be the details page for each Movie & TV show :)" }
+      this.state = { 
+          detailsOfShow: "Hello, this will be the detail page for each Movie & TV show :)" 
+        }
     }
+     
     componentDidMount() {
       setTimeout(() => {
         this.setState({

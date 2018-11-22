@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import films from './filmObject';
+import films from './filmList';
 
 class FilmBlock extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class FilmBlock extends React.Component {
           <img className="movieImage" src={this.props.srcname} alt="" />
         </Link>
         <div className="overlay">
-          <div classNamse="text">
+          <div className="text">
             {this.props.filmname}
           </div>
         </div>

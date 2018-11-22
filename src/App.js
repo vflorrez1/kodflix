@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={Gallery} />
-        <Route exact path="/:varurl" component={Details} />
+        <Route exact path="/:showId" component={Details} />
       </div>
     );
   }
