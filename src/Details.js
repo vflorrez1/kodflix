@@ -1,26 +1,23 @@
 import React, { Component } from 'react'
+import films from './filmList';
 
 class Details extends Component {
     constructor() {
-      super();
-      this.state = { 
-          detailsOfShow: "Hello, this will be the detail page for each Movie & TV show :)" 
+        super();
+        this.state = {
+            show: {}
         }
     }
-     
     componentDidMount() {
-      setTimeout(() => {
         this.setState({
-          detailsOfShow: "Coming soon! :)"
-        });
-      }, 3000);
-  
+            show: films.find(filmobject => filmobject.urlext === this.props.match.params.showId)
+        })
     }
     render() {
-      return (
-        <h1> {this.state.detailsOfShow} </h1>
-      )
+        return (
+            <h1> {this.state.show.filmName} </h1>
+        )
     }
-  }
+}
 
-  export default Details; 
+export default Details; 

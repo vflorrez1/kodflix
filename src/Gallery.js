@@ -23,7 +23,8 @@ export default function Gallery() {
   return (
     <div className="container">{
       films.map(film =>
-        <FilmBlock srcname={film.sourceName} filmname={"film.filmName"} urlext={"film.urlText"} />)
+        <FilmBlock srcname={film.sourceName} filmname={film.filmName} urlext={film.urlext} />)
+
       }
     </div>
   );
