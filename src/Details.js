@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import films from './filmList';
+import {Redirect} from "react-router-dom";
 
-class Details extends Component {
+export default class Details extends Component {
     constructor() {
         super();
         this.state = {
@@ -14,10 +15,12 @@ class Details extends Component {
         })
     }
     render() {
-        return (
-            <h1> {this.state.show.filmName} </h1>
-        )
+        if (this.state.show !== undefined) {
+            return <h1> {this.state.show.filmName} </h1>
+        } else {
+            return <Redirect to='/not-found' />
+        }
     }
 }
 
-export default Details; 
+ 
