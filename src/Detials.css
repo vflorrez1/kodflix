@@ -1,0 +1,49 @@
+/* .background{
+    background-color: black;
+
+} */
+#grad1 {
+    height: 100px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(0deg, red, yellow); /* Standard syntax (must be last) */
+}
+
+.film-name{
+    text-align: center;
+    font-size: 70px;
+    padding-top: 50px;
+}
+.details-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 100px auto 0;
+}
+.synop{
+    font-size: 40px;
+    width: 40%;
+}
+.detials-container-cover{
+    flex: 1; 
+    padding-left: 100px; 
+    
+}
+
+.image{
+  width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  .details-container{
+    display: block;
+    margin: 10% auto 0;
+  }
+  .detials-container-cover{
+    padding: 0%;
+    padding-top: 10%;
+  }
+  .synop{
+      width: 100%;
+  }
+} 
+

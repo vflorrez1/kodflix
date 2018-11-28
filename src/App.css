@@ -1,5 +1,5 @@
 .App {
-background-color: red;
+background-color: white;
  
 }
 
@@ -8,11 +8,6 @@ background-color: red;
   height: 100%;
 
 }
-/*
-.item{
-  animation:  App-logo-anti infinite 0.001s linear;
-  height: 80px;
-} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -32,6 +27,7 @@ flex-wrap: wrap;
   flex: 1;
   position: relative;
   flex-basis: 400px; 
+  
  
 }
 
@@ -59,9 +55,10 @@ flex-wrap: wrap;
   /* border: 1px solid #474242; */
   float: unset;
   /* margin: 10px 10px 10px 10px;  */
-  padding: 5px;
+  /* padding: 5px; */
   /* animation: shake 0.5s;
   animation-iteration-count: infinite; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.90);
 }
 
 @keyframes shake {
