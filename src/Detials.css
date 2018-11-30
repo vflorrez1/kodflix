@@ -1,11 +1,8 @@
-/* .background{
-    background-color: black;
+.background{
+    background: #648880;
+    background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+  
 
-} */
-#grad1 {
-    height: 100px;
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(0deg, red, yellow); /* Standard syntax (must be last) */
 }
 
 .film-name{
@@ -25,12 +22,14 @@
 }
 .detials-container-cover{
     flex: 1; 
-    padding-left: 100px; 
+    padding-left: 100px;
+    
     
 }
 
 .image{
   width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.2);
 }
 
 @media only screen and (max-width: 640px) {
