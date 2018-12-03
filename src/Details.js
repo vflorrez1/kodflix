@@ -31,7 +31,7 @@ export default class Details extends Component {
                         </div>
                     </div>
                 </div>
-
+    
             )
         } else {
             return <Redirect to='/not-found' />

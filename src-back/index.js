@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from '../src/App.js';
+import registerServiceWorker from '../src/registerServiceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
 
 
@@ -12,3 +12,7 @@ ReactDOM.render(
 </Router>    
 , document.getElementById('root'));
 registerServiceWorker();
+
+if(module.hot){
+    module.hot.accept();
+}
