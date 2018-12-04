@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import films from './filmList';
+// import films from './backend/filmList';
 
 class FilmBlock extends React.Component {
   render() {

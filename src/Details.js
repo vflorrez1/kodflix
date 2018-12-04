@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import films from './filmList';
+// import films from './backend/filmList';
 import { Redirect } from "react-router-dom";
 import './Detials.css'
 
