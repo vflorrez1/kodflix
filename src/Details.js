@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Redirect } from "react-router-dom";
 import './Detials.css'
 
+
 export default class Details extends Component {
     constructor() {
         super();
@@ -11,9 +12,11 @@ export default class Details extends Component {
         }
     }
     componentDidMount() {
-        this.setState({
-            show: films.find(filmobject => filmobject.urlext === this.props.match.params.showId)
-        })
+        fetch('/rest/shows')
+        .then(res => res.json())
+        .then (filmList => this.setState({
+            show: filmList.find(filmobject => filmobject.urlext === this.props.match.params.showId)
+        }))
     }
     render() {
         if (this.state.show !== undefined) {

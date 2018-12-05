@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 // import films from './backend/filmList';
 
 class FilmBlock extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      filmsList: {}
+    }
+  }
+
+  componentDidMount() {
+    fetch('/rest/shows')
+      .then(res => res.json())
+      .then(filmList => this.setState({ filmList }))
+  }
   render() {
     return (
       <div className="item">
@@ -19,13 +31,24 @@ class FilmBlock extends React.Component {
   }
 }
 
-export default function Gallery() {
-  return (
-    <div className="container">{
-      films.map(film =>
+export default class Gallery extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      show: []
+    }
+  }
+  componentDidMount() {
+    fetch('/rest/shows')
+      .then(res => res.json())
+      .then(filmList => this.setState({
+        show: filmList
+      }));  
+  }
+  render() {
+    return (
+      this.state.show.map(film =>
         <FilmBlock srcname={film.sourceName} filmname={film.filmName} urlext={film.urlext} />)
-
-      }
-    </div>
-  );
+    )
+  }
 }
