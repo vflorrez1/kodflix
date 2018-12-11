@@ -15,11 +15,16 @@ export default class Details extends Component {
         fetch('/rest/shows')
         .then(res => res.json())
         .then (filmList => this.setState({
-            show: filmList.find(filmobject => filmobject.urlext === this.props.match.params.showId)
+            show: filmList.find(filmobject => filmobject.urlext === this.props.match.params.showId),
+            
         }))
     }
     render() {
-        if (this.state.show !== undefined) {
+        if (this.state.show === undefined) {
+            return <Redirect to='/not-found' />
+        } else if(!Object.keys(this.state.show).length) {
+            return <div>Loading...</div>
+        } else {
             return (
                 <div className="background">
                     <div className="film-name">
@@ -30,14 +35,12 @@ export default class Details extends Component {
                             {this.state.show.synopsis}
                         </div>
                         <div className="detials-container-cover">
-                            <img className="image" src={this.state.show.sourceName} alt="" />
+                            <img className="image" src={require(`./pics/${this.state.show.urlext}.jpg`)} alt="" />
                         </div>
                     </div>
                 </div>
     
             )
-        } else {
-            return <Redirect to='/not-found' />
         }
     }
 }

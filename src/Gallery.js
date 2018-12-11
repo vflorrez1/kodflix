@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import films from './backend/filmList';
 
 class FilmBlock extends React.Component {
   constructor() {
@@ -19,7 +18,7 @@ class FilmBlock extends React.Component {
     return (
       <div className="item">
         <Link to={this.props.urlext}>
-          <img className="movieImage" src={this.props.srcname} alt="" />
+          <img className="movieImage" src={require(`./pics/${this.props.urlext}.jpg`)} alt='' />
         </Link>
         <div className="overlay">
           <div className="text">
@@ -43,12 +42,12 @@ export default class Gallery extends React.Component {
       .then(res => res.json())
       .then(filmList => this.setState({
         show: filmList
-      }));  
+      }));
   }
   render() {
     return (
       this.state.show.map(film =>
-        <FilmBlock srcname={film.sourceName} filmname={film.filmName} urlext={film.urlext} />)
+        <FilmBlock filmname={film.filmName} urlext={film.urlext} />)
     )
   }
 }

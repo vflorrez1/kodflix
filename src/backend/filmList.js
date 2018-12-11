@@ -1,9 +1,4 @@
-// import niceGuysFc from '../.././src/pics/niceguys.jpg';
-// import suitsFc from '../../src/pics/suits.jpg';
-// import narutoFc from '../../src/pics/naruto.jpg';
-// import howimetyourmotherFc from '../../src/pics/howimetyourmother.jpg';
-// import breakingbadFc from '../../src/pics/breakingbad.jpg';
-// import alteredcarbonFc from '../../src/pics/alteredcarbon.jpg';
+
 
 
 let films = [{filmName: "Nice Guys", urlext:"nice-guys", synopsis: "Holland March (Ryan Gosling) is a down-on-his-luck private eye in 1977 Los Angeles.Jackson Healy (Russell Crowe) is a hired enforcer who hurts people for a living. Fate turns them into unlikely partners after a young woman named Amelia (Margaret Qualley) mysteriously disappears. Healy and March soon learn the hard way that some dangerous people are also looking for Amelia. Their investigation takes them to dark places as anyone else who gets involved in the case seems to wind up dead."},
@@ -15,3 +10,4 @@ let films = [{filmName: "Nice Guys", urlext:"nice-guys", synopsis: "Holland Marc
 
 
 module.exports = films;
+
