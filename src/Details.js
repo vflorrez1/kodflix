@@ -13,17 +13,24 @@ export default class Details extends Component {
     }
     componentDidMount() {
         fetch('/rest/shows')
-        .then(res => res.json())
-        .then (filmList => this.setState({
-            show: filmList.find(filmobject => filmobject.urlext === this.props.match.params.showId),
-            
-        }))
+            .then(res => res.json())
+            .then(filmList => this.setState({
+                show: filmList.find(filmobject => filmobject.urlext === this.props.match.params.showId),
+
+            }))
     }
     render() {
         if (this.state.show === undefined) {
             return <Redirect to='/not-found' />
-        } else if(!Object.keys(this.state.show).length) {
-            return <div>Loading...</div>
+        } else if (!Object.keys(this.state.show).length) {
+            return (
+            <div className="loader">
+                <h1>
+                    Please Wait...
+                </h1>
+                <div class="loading"></div>
+            </div>
+            )
         } else {
             return (
                 <div className="background">
@@ -39,7 +46,7 @@ export default class Details extends Component {
                         </div>
                     </div>
                 </div>
-    
+
             )
         }
     }

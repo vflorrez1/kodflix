@@ -1,6 +1,7 @@
 .App {
 background-color: white;
- 
+display: flex;
+flex-wrap: wrap;
 }
 
 .movieImage {
@@ -8,32 +9,14 @@ background-color: white;
   height: 100%;
 
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-@keyframes App-logo-anti {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
-.container {  
-display: flex;
-flex-wrap: wrap;
-}
-
 .item {
   flex: 1;
   position: relative;
   flex-basis: 400px; 
-  
- 
-}
+  }
 
 .overlay {
   position: absolute;
-  /* bottom: -100px; */
   bottom: 0%;
   left: 0;
   right: 0;
@@ -46,18 +29,12 @@ flex-wrap: wrap;
 }
 
 .item:hover .overlay {
-  /* bottom: 0; */
   opacity: 1;
   height: 3%;
 }
 
 .item:hover{
-  /* border: 1px solid #474242; */
   float: unset;
-  /* margin: 10px 10px 10px 10px;  */
-  /* padding: 5px; */
-  /* animation: shake 0.5s;
-  animation-iteration-count: infinite; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.90);
 }
 
@@ -81,19 +58,9 @@ flex-wrap: wrap;
   text-align: center;
  }
 
-/* @media only screen and (max-width: 640px) {
-  .container{
-    display: block;
-  }
-} */
-
 .deetstext {
-
   color: blueviolet; 
-
-
 }
 a {
   text-decoration: none;
-
 }
